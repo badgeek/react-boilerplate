@@ -23,7 +23,7 @@ class PanelCourseStatTab extends Component {
     <div className="card md-card md-card-rounded">
         <div className="card-body">
             <div style={{width: 98 +'%'}} id="stacked">
-                   <FlexibleXYPlot margin={{ left: 0, right: 0, bottom:0, top: 0 }} height={430} stackBy="y">
+                   <FlexibleXYPlot color="rgb(91, 174, 243)" margin={{ left: 0, right: 0, bottom:0, top: 0 }} height={430} stackBy="y">
           <HorizontalGridLines />
           <XAxis />
           <VerticalBarSeries data={
