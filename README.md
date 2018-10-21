@@ -1,6 +1,6 @@
 # Codemi Coding Test
 
-![codemi_scrnshot](/Volumes/LOCALBRAIN/Projects/Work/codemi/react-boilerplate/screenshot/codemi_scrnshot.png)
+![codemi_scrnshot](screenshot/codemi_scrnshot.png)
 
 
 
