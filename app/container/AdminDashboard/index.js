@@ -1,52 +1,44 @@
 import React, { Component } from 'react';
+import { FETCH_ACTIVE_USER, FETCH_COURSE } from './constants'
 
-import Navbar from '../../components/Navbar'
-import BodyContainer from '../../components/BodyContainer'
-import Sidebar from '../../components/Sidebar'
-import PanelActiveUser from '../../components/PanelActiveUser'
-import PanelContainer from '../../components/PanelContainer'
-import PanelRow from '../../components/PanelRow'
-import PanelSummaryStat from '../../components/PanelSummaryStat'
-import PanelCourseVisit from '../../components/PanelCourseVisit'
-import PanelCourseStatTab from '../../components/PanelCourseStatTab'
-import PanelTitle from '../../components/PanelTitle'
-import Footer from '../../components/Footer'
+import App from './app'
+import Reducers from './reducers'
+
+import {createStore, applyMiddleware, compose} from 'redux'
+import {Provider} from 'react-redux'
+
+import createSagaMiddleware from "redux-saga";
+import { watcherSaga } from "./sagas/";
+
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(Reducers, applyMiddleware(sagaMiddleware))
+
+sagaMiddleware.run(watcherSaga);
+
+// store.dispatch({type: FETCH_ACTIVE_USER})
+// store.dispatch({type: FETCH_COURSE})
+
+// console.log(store.getState());
+
 
 class AdminDashboard extends Component {
 
     state = {  }
 
     componentDidMount() {
-        console.log("Dispatch Load User Info");                
-        console.log("Dispatch Load stats");                
+        // console.log("Dispatch Load User Info");                
+        // console.log("Dispatch Load stats");                
     }
 
     render() { 
         return ( 
-            <React.Fragment>
-                <Navbar/>
-                <BodyContainer>
-                    <Sidebar/>
-                    <PanelContainer>
-                        <PanelRow>
-                            <PanelTitle title="Codemi Home"/> 
-                            <PanelSummaryStat/>
-                            <PanelActiveUser/>
-                        </PanelRow>
-                        <PanelRow>
-                            <PanelCourseVisit/>
-                            <PanelCourseVisit/>
-                        </PanelRow>          
-                        <PanelRow>
-                            <PanelTitle title="What courses do your user visit?"/>                  
-                            <PanelCourseStatTab/>
-                        </PanelRow>              
-                    </PanelContainer>
-                </BodyContainer>
-                <Footer></Footer>
-            </React.Fragment>
+            <Provider store={store}>
+                <App></App>
+            </Provider>
          );
     }
 }
  
 export default AdminDashboard;
+
