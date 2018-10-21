@@ -6,7 +6,7 @@ class PanelPageview extends Component {
         return ( 
         // <!-- PAGEVIEW PER MINUTE -->
         <div className="col-md-4">
-          <div className="card md-card md-card-rounded h-100">
+          <div className="card md-card bg-secondary md-card-rounded h-100">
             <div className="card-header bg-secondary"> Active Users right now</div>
             <div className="card-body bg-secondary p-2">
               <h1 className="my-1">479</h1>
