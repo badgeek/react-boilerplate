@@ -16,11 +16,7 @@ class Navbar extends Component {
           <ul className="navbar-nav">
             <li className="nav-item text-dark">
               <a className="nav-link" href="#">
-                <i className="fa d-inline fa-lg fa-bookmark-o"></i> Bookmarks</a>
-            </li>
-            <li className="nav-item text-dark">
-              <a className="nav-link" href="#">
-                <i className="fa d-inline fa-lg fa-envelope-o"></i> Contacts</a>
+                <i className="fa d-inline fa-lg fa-bell-o"></i> </a>
             </li>
           </ul>
           <a className="btn navbar-btn ml-2 text-white btn-secondary">
