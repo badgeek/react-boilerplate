@@ -32,7 +32,7 @@ class PanelPageview extends Component {
               
               <div id="bar-mini-chart" className="">
               
-              <FlexibleXYPlot margin={{ left: 0, right: 0, bottom:4, top: 0 }} height={100} stackBy="y">
+              <FlexibleXYPlot margin={{ left: 0, right: 0, bottom:4, top: 0 }}  color="#8EB6F9" height={100} stackBy="y">
           <VerticalBarSeries data={
             [
               {x: 0, y: 12},
