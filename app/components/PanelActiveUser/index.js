@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
 
+
+import {
+  XYPlot,
+  XAxis,
+  YAxis,
+  VerticalGridLines,
+  HorizontalGridLines,
+  VerticalBarSeries,
+  VerticalBarSeriesCanvas,
+  makeWidthFlexible
+} from 'react-vis';
+
+import "../../../node_modules/react-vis/dist/style.css";
+
+const FlexibleXYPlot = makeWidthFlexible(XYPlot); 
+
+
 class PanelPageview extends Component {
     state = {  }
     render() { 
@@ -12,7 +29,27 @@ class PanelPageview extends Component {
               <h1 className="my-1">479</h1>
               <h6 className="text-light">Page Views per minute</h6>
               <hr className="bg-light my-2"/>
-              <div style={{height:200 + 'px'}} id="bar-mini-chart" className="my-2"></div>
+              
+              <div id="bar-mini-chart" className="">
+              
+              <FlexibleXYPlot margin={{ left: 0, right: 0, bottom:4, top: 0 }} height={100} stackBy="y">
+          <VerticalBarSeries data={
+            [
+              {x: 0, y: 12},
+              {x: 1, y: 12}, 
+              {x: 3, y: 2}, 
+              {x: 5, y: 5},
+              {x: 6, y: 8},
+              {x: 7, y: 3},
+              {x: 8, y: 5},
+              {x: 9, y: 7},
+              
+            ]} />
+        </FlexibleXYPlot>
+      
+
+              </div>
+              
               <table className="table table-sm text-light">
                 <thead>
                   <tr>
