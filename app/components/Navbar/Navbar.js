@@ -7,7 +7,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand-md navbar-codemi navbar-light fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src="/logo.png" className="d-inline-block align-top" alt="" width="110"/>
+          <img src="/logo.png" className="d-inline-block align-top" alt="" width="100"/>
            </a>
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent">
           <span className="navbar-toggler-icon"></span>
