@@ -94,14 +94,14 @@ class Sidebar extends Component {
                 </a>
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-envelope-o fa-fw mr-3"></span>
+                    <span className="fa fa-info fa-fw mr-3"></span>
                     <span className="menu-collapsed">Company Info
                     <br/> </span>
                 </div>
                 </a>
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-envelope-o fa-fw mr-3"></span>
+                    <span className="fa fa-money fa-fw mr-3"></span>
                     <span className="menu-collapsed">Billing
                     <br/> </span>
                 </div>
