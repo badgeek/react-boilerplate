@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Navbar from '../../components/Navbar'
 import BodyContainer from '../../components/BodyContainer'
 import Sidebar from '../../components/Sidebar'
-import PanelPageview from '../../components/PanelPageview'
+import PanelActiveUser from '../../components/PanelActiveUser'
 import PanelContainer from '../../components/PanelContainer'
 import PanelRow from '../../components/PanelRow'
 import PanelSummaryStat from '../../components/PanelSummaryStat'
@@ -31,7 +31,7 @@ class AdminDashboard extends Component {
                         <PanelRow>
                             <PanelTitle title="Codemi Home"/> 
                             <PanelSummaryStat/>
-                            <PanelPageview/>
+                            <PanelActiveUser/>
                         </PanelRow>
                         <PanelRow>
                             <PanelCourseVisit/>
