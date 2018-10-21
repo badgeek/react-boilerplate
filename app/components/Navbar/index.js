@@ -18,9 +18,20 @@ class Navbar extends Component {
               <a className="nav-link" href="#">
                 <i className="fa d-inline fa-lg fa-bell-o"></i> </a>
             </li>
+            <li className="nav-item ml-2  navbar-btn btn-secondary dropdown">
+        <a className="nav-link dropdown-toggle text-white " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i className="fa d-inline fa-lg fa-user-circle-o"></i> Budi P
+        </a>
+        <div className="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a className="dropdown-item" href="#">Action</a>
+          <a className="dropdown-item" href="#">Another action</a>
+          <div className="dropdown-divider"></div>
+          <a className="dropdown-item" href="#">Logout</a>
+        </div>
+      </li>
+
           </ul>
-          <a className="btn navbar-btn ml-2 text-white btn-secondary">
-            <i className="fa d-inline fa-lg fa-user-circle-o"></i> Budi P</a>
+
         </div>
       </div>
     </nav>
