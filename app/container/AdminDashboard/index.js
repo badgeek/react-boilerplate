@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 
-import Navbar from '../../components/Navbar/Navbar.js'
-import BodyContainer from '../../components/BodyContainer/BodyContainer.js'
-import Sidebar from '../../components/Sidebar/Sidebar.js'
-import PanelPageview from '../../components/PanelPageview/PanelPageview.js'
-import PanelContainer from '../../components/PanelContainer/PanelContainer.js'
-import PanelRow from '../../components/PanelRow/PanelRow.js'
-import PanelSummaryStat from '../../components/PanelSummaryStat/PanelSummaryStat.js'
-import PanelCourseVisit from '../../components/PanelCourseVisit/PanelCourseVisit.js'
-import PanelCourseStatTab from '../../components/PanelCourseStatTab/PanelCourseStatTab.js'
-import PanelTitle from '../../components/PanelTitle/PanelTitle.js'
+import Navbar from '../../components/Navbar'
+import BodyContainer from '../../components/BodyContainer'
+import Sidebar from '../../components/Sidebar'
+import PanelPageview from '../../components/PanelPageview'
+import PanelContainer from '../../components/PanelContainer'
+import PanelRow from '../../components/PanelRow'
+import PanelSummaryStat from '../../components/PanelSummaryStat'
+import PanelCourseVisit from '../../components/PanelCourseVisit'
+import PanelCourseStatTab from '../../components/PanelCourseStatTab'
+import PanelTitle from '../../components/PanelTitle'
 import Footer from '../../components/Footer'
 
 class AdminDashboard extends Component {
+
     state = {  }
+
+    componentDidMount() {
+        console.log("Dispatch Load User Info");                
+        console.log("Dispatch Load stats");                
+    }
+
     render() { 
         return ( 
             <React.Fragment>

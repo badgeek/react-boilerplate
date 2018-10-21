@@ -39,7 +39,7 @@ class Footer extends Component {
           <h2 className="mb-4 text-light">subscribe</h2>
           <form>
             <fieldset className="form-group text-white">
-              <label for="exampleInputEmail1">Get our newsletter</label>
+              <label htmlFor="exampleInputEmail1">Get our newsletter</label>
               <input className="form-control" placeholder="Enter email" type="email"/> </fieldset>
             <button type="submit" className="btn btn-outline-light">Submit</button>
           </form>
