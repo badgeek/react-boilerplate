@@ -22,13 +22,13 @@ class Sidebar extends Component {
                 {/* <!-- /END Separator --> */}
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-calendar fa-fw mr-3"></span>
+                    <span className="fa fa-book fa-fw mr-3"></span>
                     <span className="menu-collapsed">Courses</span>
                 </div>
                 </a>
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-envelope-o fa-fw mr-3"></span>
+                    <span className="fa fa-road fa-fw mr-3"></span>
                     <span className="menu-collapsed">Learning Path</span>
                 </div>
                 </a>
@@ -39,19 +39,19 @@ class Sidebar extends Component {
                 {/* <!-- /END Separator --> */}
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-calendar fa-fw mr-3"></span>
+                    <span className="fa fa-user fa-fw mr-3"></span>
                     <span className="menu-collapsed">Users</span>
                 </div>
                 </a>
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-calendar fa-fw mr-3"></span>
+                    <span className="fa fa-bicycle fa-fw mr-3"></span>
                     <span className="menu-collapsed">Skills</span>
                 </div>
                 </a>
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-calendar fa-fw mr-3"></span>
+                    <span className="fa fa-flag fa-fw mr-3"></span>
                     <span className="menu-collapsed">Reports</span>
                 </div>
                 </a>
@@ -63,7 +63,7 @@ class Sidebar extends Component {
                 </a>
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-envelope-o fa-fw mr-3"></span>
+                    <span className="fa fa-stack-exchange fa-fw mr-3"></span>
                     <span className="menu-collapsed">Announcements</span>
                 </div>
                 </a>
@@ -80,7 +80,7 @@ class Sidebar extends Component {
                 </a>
                 <a href="#" className="bg-white list-group-item list-group-item-action text-dark">
                 <div className="d-flex w-100 justify-content-start align-items-center">
-                    <span className="fa fa-envelope-o fa-fw mr-3"></span>
+                    <span className="fa fa-trophy fa-fw mr-3"></span>
                     <span className="menu-collapsed">Rewards
                     <br/> </span>
                 </div>
