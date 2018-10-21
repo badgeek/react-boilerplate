@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 import {
   XYPlot,
   XAxis,
@@ -13,41 +11,49 @@ import {
 } from 'react-vis';
 
 import "../../../node_modules/react-vis/dist/style.css";
+import { getUserList } from '../../util'
 
 const FlexibleXYPlot = makeWidthFlexible(XYPlot); 
 
+class PanelActiveUser extends Component {
 
-class PanelPageview extends Component {
-    state = {  }
+    getChart(userList) {
+      const data = userList.map( (user, idx) => {return  {x:idx, y:parseInt(user.height)} } )
+      return(                
+      <FlexibleXYPlot margin={{ left: 0, right: 0, bottom:4, top: 0 }}  color="#8EB6F9" height={100} stackBy="y">
+        <VerticalBarSeries data={data} />
+      </FlexibleXYPlot>
+      )
+    }
+
+    getUserList(users) {
+      // console.log(users)
+        return(
+          users.slice(0,5).map((user) => { return(
+          <tr key={user.name}>
+            <td>{user.name}</td>
+            <td>{user.height}</td>
+          </tr>
+          )})
+        )
+    }
+
     render() { 
+
+        const {activeUser, userList} = this.props
+
         return ( 
         // <!-- PAGEVIEW PER MINUTE -->
         <div className="col-md-4">
           <div className="card md-card bg-secondary md-card-rounded h-100">
             <div className="card-header bg-secondary"> Active Users right now</div>
             <div className="card-body bg-secondary p-2">
-              <h1 className="my-1">479</h1>
+              <h1 className="my-1">{activeUser.active_user}</h1>
               <h6 className="text-light">Page Views per minute</h6>
               <hr className="bg-light my-2"/>
               
               <div id="bar-mini-chart" className="">
-              
-              <FlexibleXYPlot margin={{ left: 0, right: 0, bottom:4, top: 0 }}  color="#8EB6F9" height={100} stackBy="y">
-          <VerticalBarSeries data={
-            [
-              {x: 0, y: 12},
-              {x: 1, y: 12}, 
-              {x: 3, y: 2}, 
-              {x: 5, y: 5},
-              {x: 6, y: 8},
-              {x: 7, y: 3},
-              {x: 8, y: 5},
-              {x: 9, y: 7},
-              
-            ]} />
-        </FlexibleXYPlot>
-      
-
+                {this.getChart(activeUser.user_list)}
               </div>
               
               <table className="table table-sm text-light">
@@ -58,18 +64,7 @@ class PanelPageview extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Mark</td>
-                    <td>65</td>
-                  </tr>
-                  <tr>
-                    <td>Jacob</td>
-                    <td>45</td>
-                  </tr>
-                  <tr>
-                    <td>Larry</td>
-                    <td>23</td>
-                  </tr>
+                  {this.getUserList(activeUser.user_list)}
                 </tbody>
               </table>
             </div>
@@ -79,4 +74,4 @@ class PanelPageview extends Component {
         )}
 }
  
-export default PanelPageview;
+export default PanelActiveUser;

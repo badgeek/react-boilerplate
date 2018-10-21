@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
+import { getUserList } from '../../util'
 
 class PanelCourseVisit extends Component {
     state = {  }
-    render() { 
-        return ( 
+
+    getUserList(courses) {
+      // console.log(users)
+        return(
+          courses.map((course) => { return(
+          <tr key={course.title}>
+            <td>{course.title}</td>
+            <td>{course.episode_id}</td>
+            <td>{course.characters.length}</td>
+
+          </tr>
+          )})
+        )
+    }
+
+    render() {      
+
+      const {courseList} = this.props
+      
+      return ( 
             <div className="col-md-6">
           <div className="row">
             <div className="col-md-12">
-              <h4 className="">Who is your most active user?</h4>
+              <h4 className="">What courses do your user visit?</h4>
             </div>
           </div>
           <div className="card md-card md-card-rounded">
@@ -23,26 +42,7 @@ class PanelCourseVisit extends Component {
                 <tbody className="text-primary">
                   <tr></tr>
                   <tr></tr>
-                  <tr>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>Cell</td>
-                  </tr>
-                  <tr>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>Cell</td>
-                  </tr>
-                  <tr>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>Cell</td>
-                  </tr>
-                  <tr>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>Cell</td>
-                  </tr>
+                  {this.getUserList(courseList.courses)}
                 </tbody>
               </table>
             </div>

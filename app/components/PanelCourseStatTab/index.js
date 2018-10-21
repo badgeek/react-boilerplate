@@ -17,28 +17,33 @@ import {
 
   
 class PanelCourseStatTab extends Component {
+
+
+    getChart(courses) {
+
+        const data = courses.map( (course, idx) => {return {x:idx, y:course.starships.length}} )
+
+        return(
+            <FlexibleXYPlot color="rgb(91, 174, 243)" margin={{ left: 0, right: 0, bottom:0, top: 0 }} height={430} stackBy="y">
+            <HorizontalGridLines />
+            <XAxis title="Courses" position="start" />
+          <YAxis title="Visits" />
+            <VerticalBarSeries data={data} />
+          </FlexibleXYPlot>
+        
+        )
+    }
+
     render() { 
+
+        const {courseList} = this.props;
+
         return ( 
 <div className="col-md-12">
     <div className="card md-card md-card-rounded">
         <div className="card-body">
             <div style={{width: 98 +'%'}} id="stacked">
-                   <FlexibleXYPlot color="rgb(91, 174, 243)" margin={{ left: 0, right: 0, bottom:0, top: 0 }} height={430} stackBy="y">
-          <HorizontalGridLines />
-          <XAxis />
-          <VerticalBarSeries data={
-            [{
-              x: 2, y: 12}, 
-              {x: 3, y: 2}, 
-              {x: 5, y: 5},
-              {x: 6, y: 8},
-              {x: 7, y: 3},
-              {x: 8, y: 5},
-              {x: 9, y: 7},
-              
-            ]} />
-        </FlexibleXYPlot>
-      
+                {this.getChart(courseList.courses)}
             </div>
         </div>
     </div>

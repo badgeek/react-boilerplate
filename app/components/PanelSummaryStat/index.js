@@ -26,7 +26,7 @@ class SummaryStat extends Component {
       return (
         <FlexibleXYPlot margin={{ left: 25, right: 0, bottom:25, top: 25 }}  height={400}>
           <HorizontalGridLines />
-          <XAxis title={axisUser} position="start" />
+          <XAxis title="X Axis" position="start" />
           <YAxis title="Y Axis" />
           <Line
             className="first-series"
