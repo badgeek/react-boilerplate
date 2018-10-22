@@ -1,5 +1,6 @@
 import { takeLatest, call, put } from "redux-saga/effects";
-import axios from "axios";
+import { fetchActiveUser, fetchCourse } from '../api'
+
 
 import {
     FETCH_ACTIVE_USER, 
@@ -18,20 +19,6 @@ export function* watcherSaga() {
 
 }
 
-// function that makes the api request and returns a Promise for response
-function fetchActiveUser() {
-  return axios({
-    method: "get",
-    url: "https://swapi.co/api/people/?format=json"
-  });
-}
-
-function fetchCourse() {
-    return axios({
-      method: "get",
-      url: "https://swapi.co/api/films/?format=json"
-    });
-  }
 // worker saga: makes the api call when watcher saga sees the action
 function* fetchActiverUserSaga() {
   try {

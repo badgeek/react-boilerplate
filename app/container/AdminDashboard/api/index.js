@@ -1,3 +1,18 @@
+import axios from "axios";
+
+export function fetchActiveUser() {
+    return axios({
+    method: "get",
+    url: "https://swapi.co/api/people/?format=json"
+    });
+}
+  
+export function fetchCourse() {
+    return axios({
+    method: "get",
+    url: "https://swapi.co/api/films/?format=json"
+    });
+}
 
 export const api_result = {
     "count": 87, 
