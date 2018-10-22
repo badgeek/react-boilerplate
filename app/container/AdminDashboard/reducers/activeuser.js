@@ -1,8 +1,5 @@
-import { fromJS } from 'immutable';
 
 import { FETCH_ACTIVE_USER, FETCH_ACTIVE_USER_SUCCESS } from '../constants';
-
-import { api_result } from '../api/'
 
 const initial_state = {
     fetching: false,

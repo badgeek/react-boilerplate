@@ -1,4 +1,3 @@
-import { fromJS } from 'immutable';
 
 import { FETCH_MOST_ACTIVE_USER, FETCH_MOST_ACTIVE_USER_SUCCESS } from '../constants';
 

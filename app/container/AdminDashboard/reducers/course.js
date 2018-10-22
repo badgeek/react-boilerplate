@@ -1,8 +1,5 @@
-import { fromJS } from 'immutable';
 
 import { FETCH_COURSE, FETCH_COURSE_SUCCESS } from '../constants';
-
-import { api_film_result } from '../api/'
 
 const initial_state = {
     fetching: false,

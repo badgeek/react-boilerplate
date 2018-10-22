@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { doFetchActiverUser, doFetchCourse } from './actions'
+
 import '../../../node_modules/bootstrap/js/dist/dropdown';
 
 import Navbar from '../../components/Navbar'
@@ -39,14 +40,10 @@ class App extends Component {
 
     state = {  }
 
-    componentDidMount() {
-        // console.log("Dispatch Load User Info");                
-        // console.log("Dispatch Load stats");          
+    componentDidMount() {    
         this.props.fetchActiveUser()
         this.props.fetchCourse()      
     }
-
-    
 
     render() { 
 
@@ -54,29 +51,27 @@ class App extends Component {
 
         return ( 
                 <React.Fragment>
-                <Navbar/>
-                <BodyContainer>
-                    <Sidebar/>
-                    <PanelContainer>                        
-                        <PanelRow>
-                            <PanelTitle title="Codemi Home"/> 
-                            <PanelSummaryStat/>
-                            <PanelActiveUser activeUser={activeUser} />
-                        </PanelRow>                        
-                        <PanelRow>
-                            <PanelCourseVisit courseList={courseList}/>
-                            <PanelCourseVisit courseList={courseList}/>
-                        </PanelRow>          
-                        <PanelRow>
-                            <PanelTitle  title="What courses do your user visit?"/>                  
-                            <PanelCourseStatTab courseList={courseList}/>
-                        </PanelRow>             
-                    </PanelContainer>
-
-                </BodyContainer>
-                <Footer></Footer>   
-                </React.Fragment>
-                
+                    <Navbar/>
+                    <BodyContainer>
+                        <Sidebar/>
+                        <PanelContainer>                        
+                            <PanelRow>
+                                <PanelTitle title="Codemi Home"/> 
+                                <PanelSummaryStat/>
+                                <PanelActiveUser activeUser={activeUser} />
+                            </PanelRow>                        
+                            <PanelRow>
+                                <PanelCourseVisit courseList={courseList}/>
+                                <PanelCourseVisit courseList={courseList}/>
+                            </PanelRow>          
+                            <PanelRow>
+                                <PanelTitle  title="What courses do your user visit?"/>                  
+                                <PanelCourseStatTab courseList={courseList}/>
+                            </PanelRow>             
+                        </PanelContainer>
+                    </BodyContainer>
+                    <Footer></Footer>   
+                </React.Fragment>                
          );
     }
 }
